@@ -7,7 +7,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()){
         echo "<tr>";
-        echo "<td class='sticky-element'>" . $row["nimi"] . "</td>";
+        echo "<td class='sticky-element'>" . ($row["nimi"] == NULL ? "-" : $row["nimi"]) . "</td>";
         echo "<td>" . ($row["paikka"] == NULL ? "-" : $row["paikka"]) . "</td>";
         echo "<td>" . ($row["ohjaaja"] == NULL ? "-" : $row["ohjaaja"]) . "</td>";
         echo "<td>" . ($row["yhteystiedot"] == NULL ? "-" : $row["yhteystiedot"]) . "</td>";
