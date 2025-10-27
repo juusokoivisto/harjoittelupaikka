@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Harkkapaikka</title>
+</head>
+<body>
+    <header>
+        <h1>Harkkapaikka</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#harkkapaikka">Harjoittelu Paikat</a></li>
+            <li><a href="#kirjaudu">Kirjaudu Sisään</a></li>
+        </ul>   
+    </nav>
+
+    <main>
+        <section id="harkkapaikka">
+            <h2>Harjoitus Paikat</h2>  
+            <div class="centered-table">
+                <table class="overflow-table">
+                    <thead>
+                        <tr>
+                            <th class="sticky-element">Oppilas</th>
+                            <th>Harj. Paikka</th>
+                            <th>Ohjaaja</th>
+                            <th>Yhteystiedot</th>
+                            <th>Status</th>
+                            <th>Aika</th>
+                            <th>Lisätietoja</th>
+                            <th>Ruokarahat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sticky-element">Nico</td>
+                            <td>SoftWave</td>
+                            <td>Pihlaja E.</td>
+                            <td>040123456</td>
+                            <td>Valmis</td>
+                            <td>7.1-20.3 2026</td>
+                            <td>-</td>
+                            <td>Kyllä</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-element">Eetu</td>
+                            <td>SoftWave</td>
+                            <td>Pihlaja E.</td>
+                            <td>040123456</td>
+                            <td>Valmis</td>
+                            <td>7.1-20.3 2026</td>
+                            <td>-</td>
+                            <td>Kyllä</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-element">Luka</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Etsitään</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-element">Sanri</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Etsitään</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-element">Joanna</td>
+                            <td>UPM</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Valmis</td>
+                            <td>7.1-20.3 2026</td>
+                            <td>-</td>
+                            <td>Kyllä</td>
+                        </tr>
+                        <tr>
+                            <td class="sticky-element">Sanni</td>
+                            <td>UPM</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Valmis</td>
+                            <td>7.1-20.3 2026</td>
+                            <td>-</td>
+                            <td>Kyllä</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>  
+
+        <section id="kirjaudu" hidden="true">
+            <h2>Kirjaudu Sisään</h2>
+            <form>
+                <label for="fname">Käyttäjä tunnus:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="fsalasana">Salasana:</label><br>
+                <input type="password" id="fsalasana" name="fsalasana"><br><br>
+                <input type="submit" value="Kirjaudu">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-text">Tekijä: <a href="mailto:juuso.koivisto@student.kpedu.fi">Juuso Koivisto</a></p>
+    </footer>
+</body>
+</html>
