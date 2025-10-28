@@ -1,6 +1,6 @@
 body {
     font-family: arial, sans-serif;
-
+    
     min-height: 100vh;
     margin: 0;
 
@@ -9,7 +9,13 @@ body {
 }
 
 main {
-    flex: 1
+    flex: 1;
+}
+
+.centered-form {
+    width: 25%;
+    margin: auto;
+    text-align: center;
 }
 
 table {

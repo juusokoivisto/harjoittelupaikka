@@ -13,8 +13,9 @@
 
     <nav>
         <ul>
-            <li><a href="#harkkapaikka">Harjoittelu Paikat</a></li>
-            <li><a href="#kirjaudu">Kirjaudu Sisään</a></li>
+            <li><a href="./index.php">Harjoittelu Paikat</a></li>
+            <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
+            <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
         </ul>   
     </nav>
 
@@ -25,7 +26,7 @@
                 <table class="overflow-table">
                     <thead>
                         <tr>
-                            <th class="sticky-element">Oppilas</th>
+                            <th class="sticky-element">Nimi</th>
                             <th>Harj. Paikka</th>
                             <th>Ohjaaja</th>
                             <th>Yhteystiedot</th>
@@ -43,7 +44,11 @@
                     </tbody>
                 </table>
             </div>
-        </section>  
+        </section>
+        
+        <section>
+
+        </section>
     </main>
 
     <footer>
