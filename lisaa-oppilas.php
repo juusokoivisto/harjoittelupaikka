@@ -62,7 +62,7 @@
                     <label for="f_ruokaraha">Ruokarahat</label>
                     <input type="checkbox" id="f_ruokaraha" name="f_ruokaraha"><br> 
                 </fieldset>
-
+                <br>
                 <input type="submit" value="Lisää">
             </form>
         </section>
