@@ -1,3 +1,7 @@
+<?php
+include "connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -29,10 +33,10 @@
                     <input type="text" id="f_username" name="f_username" required><br>
 
                     <label for="f_salasana">Salasana</label><br>
-                    <input type="text" id="f_salasana" name="f_salasana" required><br>
+                    <input type="password" id="f_salasana" name="f_salasana" required><br>
                 </fieldset>
                 <br>
-                <input type="submit" value="Lisää">
+                <input type="submit" value="Kirjaudu">
             </form>
         </section>
     </main>

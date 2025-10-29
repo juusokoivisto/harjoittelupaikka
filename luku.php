@@ -1,6 +1,4 @@
 <?php
-include "connect.php";
-
 $sql = "SELECT * FROM oppilaat"; 
 $result = $conn->query($sql);
 

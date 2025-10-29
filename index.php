@@ -1,3 +1,9 @@
+<?php
+include "connect.php";
+if(isset($_SESSION["tunnus"])) {
+    echo $_SESSION["tunnus"];
+}
+?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
