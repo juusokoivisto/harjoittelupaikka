@@ -46,5 +46,20 @@ if (isset($_POST["f_oppilas"])) {
         echo "Kirjautuminen epäonnistui";
         exit();
     }
-}   
+} else if(isset($_POST["f_hp_nimi"])) {
+    $nimi = $_POST["f_hp_nimi"];
+    $osoite = $_POST["f_hp_osoite"];
+    $yhteystiedot = $_POST["f_hp_yhteystiedot"];
+    
+    $sql = "INSERT INTO harjoittelupaikat (nimi, osoite, yhteystiedot) 
+    VALUES ('$nimi', '$osoite', '$yhteystiedot')";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Uusi harkkapaikka lisätty järjestelmään";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    
+    header("location: paikat.php");
+}
 ?>

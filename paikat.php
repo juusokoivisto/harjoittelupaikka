@@ -1,20 +1,18 @@
 <?php
 include "connect.php";
-if(isset($_SESSION["tunnus"])) {
-    echo $_SESSION["tunnus"];
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Harkkapaikka</title>
+    <title>Harjoittelupaikat</title>
 </head>
 <body>
     <header>
-        <h1>Harkkapaikka</h1>
+        <h1>Harjoittelupaikat</h1>
     </header>
 
     <nav>
@@ -26,28 +24,21 @@ if(isset($_SESSION["tunnus"])) {
             <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
         </ul>   
     </nav>
-
-    <main>
-        <section id="harkkapaikka">
-            <h2>Harjoitus Paikat</h2>  
+    
+    <main>       
+        <section>
             <div class="centered-table">
                 <table class="overflow-table">
                     <thead>
                         <tr>
                             <th class="sticky-element">Nimi</th>
-                            <th>Harj. Paikka</th>
-                            <th>Ohjaaja</th>
+                            <th>Osoite</th>
                             <th>Yhteystiedot</th>
-                            <th>Status</th>
-                            <th>Aloitus</th>
-                            <th>Lopetus</th>
-                            <th>Ruokarahat</th>
-                            <th>Lisätietoja</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            include "luku.php";
+                            include "harkkapaikat.php";
                         ?>
                     </tbody>
                 </table>

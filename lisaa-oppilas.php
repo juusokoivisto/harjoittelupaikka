@@ -17,9 +17,11 @@ include "connect.php";
 
     <nav>
         <ul>
-            <li><a href="./index.php">Harjoittelu Paikat</a></li>
+            <li><a href="./index.php">Haetut paikat</a></li>
+            <li><a href="./paikat.php">Harjoittelu paikat</a></li>
             <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
             <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
+            <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
         </ul>   
     </nav>
 
@@ -38,8 +40,14 @@ include "connect.php";
 
                 <fieldset>
                     <legend>Työharjoittelupaikan tiedot</legend>
+                    
                     <label for="f_paikka">Harj. Paikka</label><br>
-                    <input type="text" id="f_paikka" name="f_paikka"><br>
+                    <input list="paikat" id="f_paikka" name="f_paikka"/><br>
+                    <datalist id="paikat">
+                        <?php
+                            include "listapaikat.php";
+                        ?>
+                    </datalist>
 
                     <label for="f_ohjaaja">Ohjaaja</label><br>
                     <input type="text" id="f_ohjaaja" name="f_ohjaaja"><br>

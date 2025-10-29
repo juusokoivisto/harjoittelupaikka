@@ -8,11 +8,11 @@ include "connect.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Kirjaudu sisään</title>
+    <title>Lisää harjoittelupaikka</title>
 </head>
 <body>
     <header>
-        <h1>Kirjaudu sisään</h1>
+        <h1>Lisää harjoittelupaikka</h1>
     </header>
 
     <nav>
@@ -21,24 +21,27 @@ include "connect.php";
             <li><a href="./paikat.php">Harjoittelu paikat</a></li>
             <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
             <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
-            <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
+            <li><a href="./lisaa-oppilas.php">Lisää Harjoittelupaikka</a></li>
         </ul>   
     </nav>
-    
-    <main>
+
+    <main>       
         <section>
             <form action="actionpage.php" method="POST" class="centered-form">
                 <fieldset>
-                    <legend>Kirjaudu sisään</legend>
+                    <legend>Työharjoittelupaikan tiedot</legend>
 
-                    <label for="f_username">Käyttäjänimi</label><br>
-                    <input type="text" id="f_username" name="f_username" required><br>
+                    <label for="f_hp_nimi">Paikan nimi</label><br>
+                    <input type="text" id="f_hp_nimi" name="f_hp_nimi" required><br>
 
-                    <label for="f_salasana">Salasana</label><br>
-                    <input type="password" id="f_salasana" name="f_salasana" required><br>
+                    <label for="f_hp_yhteystiedot">Yhteystiedot</label><br>
+                    <input type="text" id="f_hp_yhteystiedot" name="f_hp_yhteystiedot" required><br>
+
+                    <label for="f_hp_osoite">Osoite</label><br>
+                    <input type="text" id="f_hp_osoite" name="f_hp_osoite" required><br>
                 </fieldset>
                 <br>
-                <input type="submit" value="Kirjaudu">
+                <input type="submit" value="Lisää">
             </form>
         </section>
     </main>
