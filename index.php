@@ -1,6 +1,7 @@
 <?php
 include "connect.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -11,9 +12,8 @@ include "connect.php";
 </head>
 <body>
     <header>
-        <h1>Harjoittelupaikat</h1>
         <nav>
-            <ul>
+            <ul class="horizontal-nav">
                 <li><a href="./index.php">Haetut paikat</a></li>
                 <li><a href="./paikat.php">Harjoittelu paikat</a></li>
                 <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
@@ -21,6 +21,7 @@ include "connect.php";
                 <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
             </ul>   
         </nav>
+        <h1>Harjoittelupaikat</h1>
     </header>
 
     <main>

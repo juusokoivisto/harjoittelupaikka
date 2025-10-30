@@ -13,12 +13,36 @@ main {
 }
 
 .centered-form {
-    width: 25%;
-    margin: auto;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 table {
     border-collapse: collapse;
+}
+
+.horizontal-nav {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-shadow: 0 0 8px #666;
+}
+
+.horizontal-nav > li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.horizontal-nav > li a:hover {
+    background-color: #dddddd;
 }
 
 .centered-table {
@@ -42,13 +66,33 @@ h1, h2 {
 
 .footer-text {
     margin-left: 10px;
+    color: black;
+}
+
+.button-input {
+    width: 200px;
+
+    background-color: white;
+    margin: 20px;
+    padding: 0 10px 10px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #666;
+    padding-top: 10px;
+}
+
+.button-input:hover {
+    background-color: #dddddd;
+}
+
+.footer-text > a {
+    color: black;
 }
 
 footer {
-    color: white;
-
-    background-color: rgb(187, 0, 255);
     min-height: 50px;
+    box-shadow: 0 0 8px #666;
+    margin-top: auto;
 }
 
 tr:nth-child(even) {
@@ -65,4 +109,20 @@ tr:nth-child(even) {
     position: sticky;
     left: 0;
     background-color: #ffffff;
+}
+
+.rounded-fieldset {
+    margin: 20px;
+    padding: 0 10px 10px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #666;
+    padding-top: 10px;
+}
+
+.rounded-fieldset > legend  {
+    padding: 2px 4px;
+    background: #fff;
+    border: 1px solid #666;
+    border-radius: 8px;
 }

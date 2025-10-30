@@ -12,9 +12,8 @@ include "connect.php";
 </head>
 <body>
     <header>
-        <h1>Harjoittelupaikat</h1>
         <nav>
-            <ul>
+            <ul class="horizontal-nav">
                 <li><a href="./index.php">Haetut paikat</a></li>
                 <li><a href="./paikat.php">Harjoittelu paikat</a></li>
                 <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
@@ -22,12 +21,13 @@ include "connect.php";
                 <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
             </ul>   
         </nav>
+        <h1>Harjoittelupaikat</h1>
     </header>
 
     <main>       
         <section>
             <form action="actionpage.php" method="POST" class="centered-form">
-                <fieldset>
+                <fieldset class="rounded-fieldset">
                     <legend>Omat tiedot</legend>
 
                     <label for="f_oppilas">Nimi</label><br>
@@ -37,7 +37,7 @@ include "connect.php";
                     <input type="text" id="f_muuta" name="f_muuta" placeholder="Kokkolan lähellä"><br>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="rounded-fieldset">
                     <legend>Työharjoittelupaikan tiedot</legend>
                     
                     <label for="f_paikka">Harj. Paikka</label><br>
@@ -61,7 +61,7 @@ include "connect.php";
                     <input type="date" id="f_lopetus" name="f_lopetus" required><br>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="rounded-fieldset">
                     <legend>Muuta tietoa</legend>
                                         
                     <label for="f_status">Status</label><br>
@@ -73,15 +73,18 @@ include "connect.php";
                     <label for="f_ruokaraha">Ruokarahat</label>
                     <input type="checkbox" id="f_ruokaraha" name="f_ruokaraha"><br> 
                 </fieldset>
-                <br>
-                <input type="submit" value="Lisää">
+                <input class="button-input" type="submit" value="Lisää">
             </form>
         </section>
     </main>
 
     <footer>
-        <p class="footer-text">Tekijä: <a href="mailto:juuso.koivisto@student.kpedu.fi">Juuso Koivisto</a>
-</p>
+        <p class="footer-text">
+            Tekijä: 
+            <a href="mailto:juuso.koivisto@student.kpedu.fi">
+                Juuso Koivisto
+            </a>
+        </p>
     </footer>
 </body>
 </html>

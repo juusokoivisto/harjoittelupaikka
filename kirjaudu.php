@@ -12,9 +12,8 @@ include "connect.php";
 </head>
 <body>
     <header>
-        <h1>Harjoittelupaikat</h1>
         <nav>
-            <ul>
+            <ul class="horizontal-nav">
                 <li><a href="./index.php">Haetut paikat</a></li>
                 <li><a href="./paikat.php">Harjoittelu paikat</a></li>
                 <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
@@ -22,12 +21,13 @@ include "connect.php";
                 <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
             </ul>   
         </nav>
+        <h1>Harjoittelupaikat</h1>
     </header>
     
     <main>
         <section>
             <form action="actionpage.php" method="POST" class="centered-form">
-                <fieldset>
+                <fieldset class="rounded-fieldset">
                     <legend>Kirjaudu sisään</legend>
 
                     <label for="f_username">Käyttäjänimi</label><br>
@@ -36,7 +36,6 @@ include "connect.php";
                     <label for="f_salasana">Salasana</label><br>
                     <input type="password" id="f_salasana" name="f_salasana" required><br>
                 </fieldset>
-                <br>
                 <input type="submit" value="Kirjaudu">
             </form>
         </section>
