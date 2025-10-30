@@ -12,18 +12,17 @@ include "connect.php";
 </head>
 <body>
     <header>
-        <h1>Lisää oppilas</h1>
+        <h1>Harjoittelupaikat</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.php">Haetut paikat</a></li>
+                <li><a href="./paikat.php">Harjoittelu paikat</a></li>
+                <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
+                <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
+                <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
+            </ul>   
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="./index.php">Haetut paikat</a></li>
-            <li><a href="./paikat.php">Harjoittelu paikat</a></li>
-            <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
-            <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
-            <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
-        </ul>   
-    </nav>
 
     <main>       
         <section>
@@ -81,11 +80,8 @@ include "connect.php";
     </main>
 
     <footer>
-        <p class="footer-text">Tekijä: 
-            <a href="mailto:juuso.koivisto@student.kpedu.fi">
-                Juuso Koivisto
-            </a>
-        </p>
+        <p class="footer-text">Tekijä: <a href="mailto:juuso.koivisto@student.kpedu.fi">Juuso Koivisto</a>
+</p>
     </footer>
 </body>
 </html>

@@ -13,17 +13,16 @@ include "connect.php";
 <body>
     <header>
         <h1>Harjoittelupaikat</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.php">Haetut paikat</a></li>
+                <li><a href="./paikat.php">Harjoittelu paikat</a></li>
+                <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
+                <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
+                <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
+            </ul>   
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="./index.php">Haetut paikat</a></li>
-            <li><a href="./paikat.php">Harjoittelu paikat</a></li>
-            <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
-            <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
-            <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
-        </ul>   
-    </nav>
     
     <main>       
         <section>
