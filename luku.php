@@ -17,6 +17,19 @@ if ($result->num_rows > 0) {
         echo "<td>" . ($row["lopetus"] ?: "-") . "</td>";
         echo "<td>" . $ruokaraha . "</td>";
         echo "<td>" . ($row["muuta"] ?: "-") . "</td>";
+
+        if (isset($_SESSION["tunnus"])) {
+            echo "<td><form action='actions/actionpage.php' method='post'>";
+            echo "<input type='submit' value='Muokkaa'>";
+            echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+            echo "</form>";
+    
+            echo "<form action='actions/poista_oppilas.php' method='post'>";
+            echo "<input type='submit' value='Poista'>";
+            echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+            echo "</form></td>";
+        }
+
         echo "</tr>";
     }
 } else {

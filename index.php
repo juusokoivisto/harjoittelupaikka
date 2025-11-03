@@ -29,6 +29,9 @@ include "connect.php";
                             <th>Lopetus</th>
                             <th>Ruokarahat</th>
                             <th>Lisätietoja</th>
+                            <?php if(isset($_SESSION["tunnus"])): ?>
+                                <th>Toiminnot</th>
+                            <?php endif; ?>
                         </tr>
                     </thead>
                     <tbody>
