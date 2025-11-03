@@ -1,63 +1,65 @@
-<?php
-include "connect.php";
-?>
-
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Harkkapaikka</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="horizontal-nav">
-                <li><a href="./index.php">Haetut paikat</a></li>
-                <li><a href="./paikat.php">Harjoittelu paikat</a></li>
-                <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
-                <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
-                <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
-            </ul>   
-        </nav>
-        <h1>Harjoittelupaikat</h1>
+    <nav>
+        
+            <a href="./kirjautuminen.php">Kirjaudu sisään</a> |
+            <a href="./lisaa_oppilas.php">Lisää oppilas</a> |
+            <a href="./harjoittelupaikat.php">Harjoittelupaikat</a> |
+            <a href="./lisaa_harjoittelupaikka.php">Lisää harjoittelupaikka</a> |
+            <a href="#footer">Tekijät</a>
+        
+    </nav>
+        
     </header>
-
     <main>
-        <section id="harkkapaikka">
-            <h2>Harjoitus Paikat</h2>  
-            <div class="centered-table">
-                <table class="overflow-table">
-                    <thead>
-                        <tr>
-                            <th class="sticky-element">Nimi</th>
-                            <th>Harj. Paikka</th>
-                            <th>Ohjaaja</th>
-                            <th>Yhteystiedot</th>
-                            <th>Status</th>
-                            <th>Aloitus</th>
-                            <th>Lopetus</th>
-                            <th>Ruokarahat</th>
-                            <th>Lisätietoja</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            include "luku.php";
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <div class="welcome">
+                <?php
+                include "connect.php";
+                if (isset($_SESSION['tunnus'])) {
+                    echo "Tervetuloa <b>" . $_SESSION['tunnus'] . "<br>";
+                }
+                ?>
+        </div>
+    <section>    
+        <h1 class="etusivu">Etusivu</h1>
+        <div class="centered-table">
+            <table class="overflow-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-element">Oppilas</th>
+                        <th>Harkkapaikka</th>
+                        <th>Ohjaaja</th>
+                        <th>Yhteystiedot</th>
+                        <th>Harjoittelu alkaa</th>
+                        <th>Harjoittelu loppuu</th>
+                        <th>Status</th>
+                        <th>Ruokaraha</th>
+                        <th>Lisätietoa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    include "luku.php";
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </section>    
     </main>
-
-    <footer>
-        <p class="footer-text">Tekijä: 
-            <a href="mailto:juuso.koivisto@student.kpedu.fi">
-                Juuso Koivisto
-            </a>
-        </p>
+    <br>
+    <footer id="footer">
+        <h3 class="footer-text">Tekijät</h3>
+        <p class="footer-text">Eetu Kiljala</p>
+        <p class="footer-text">Nico Pasanen</p>
+        <p class="footer-text">Juuso Koivisto</p>
     </footer>
 </body>
 </html>

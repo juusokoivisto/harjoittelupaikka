@@ -1,65 +1,61 @@
 <?php
+
 include "connect.php";
 
-if (isset($_POST["f_oppilas"])) {
-    $nimi = $_POST["f_oppilas"];
-    $paikka = $_POST["f_paikka"];
-    $ohjaaja = $_POST["f_ohjaaja"];
-    $yhteystiedot = $_POST["f_yhteystiedot"];
-    $status = $_POST["f_status"];
-    $aloitus = $_POST["f_aloitus"];
-    $lopetus = $_POST["f_lopetus"];
-    $muuta = $_POST["f_muuta"];
-    
-    $ruokaraha = "off";
-    if (!empty($_POST["f_ruokaraha"])) {
-        $ruokaraha = $_POST["f_ruokaraha"];
-    }
-    
-    $sql = "INSERT INTO oppilaat (nimi, paikka, ohjaaja, yhteystiedot, aloitus, lopetus, status, ruokaraha, muuta) 
-    VALUES ('$nimi', '$paikka', '$ohjaaja', '$yhteystiedot', '$aloitus', '$lopetus','$status', '$ruokaraha', '$muuta')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Uusi oppilas lisätty järjestelmään";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    
-    header("location: index.php");
-} else if (isset($_POST["f_username"])) {
-    $username = mysqli_real_escape_string($conn, $_POST["f_username"]);
-    $salasana = mysqli_real_escape_string($conn, $_POST["f_salasana"]);
+if (isset($_POST['nimi'])) {
 
-    if ($username == NULL or $salasana == NULL) {
-        header("location: kirjaudu.php");
-    }
+$nimi =             $_POST['nimi'];
+$harkkapaikka =     $_POST['harkkapaikka'];
+$ohjaaja =          $_POST['ohjaaja'];
+$yhteystiedot =     $_POST['yhteystiedot'];
+$status =           $_POST['status'];
+$alkaa =            $_POST['alkaa'];
+$loppuu =           $_POST['loppuu'];
+$ruokaraha =        $_POST['ruokaraha'];
+$lisatietoa =       $_POST['lisatietoa'];
 
-    $sql = "SELECT * FROM users WHERE username = '".$username."' LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
-    $hashedPwd = $row["password"];
-    if(password_verify($salasana, $hashedPwd)) {
-        $_SESSION["tunnus"] = $username;
-        header("location: index.php");
-        echo "Kirjautuminen onnistui";
-    } else {
-        echo "Kirjautuminen epäonnistui";
-        exit();
-    }
-} else if(isset($_POST["f_hp_nimi"])) {
-    $nimi = $_POST["f_hp_nimi"];
-    $osoite = $_POST["f_hp_osoite"];
-    $yhteystiedot = $_POST["f_hp_yhteystiedot"];
+$sql = "INSERT INTO oppilaat (oppilas, harkkapaikka, ohjaaja, yhteystiedot, status, aloitus, lopetus, ruokaraha, muuta) VALUES
+('$nimi', '$harkkapaikka', '$ohjaaja', '$yhteystiedot', '$status', '$alkaa', '$loppuu', '$ruokaraha', '$lisatietoa')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Uusi oppilas lisätty järjestelmään";
     
-    $sql = "INSERT INTO harjoittelupaikat (nimi, osoite, yhteystiedot) 
-    VALUES ('$nimi', '$osoite', '$yhteystiedot')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Uusi harkkapaikka lisätty järjestelmään";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    
-    header("location: paikat.php");
+    echo '<script>';
+    echo 'location.replace("index.php")';
+    echo '</script>';
+
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+}
+
+
+if (isset($_POST['tunnus'])) {
+
+    $tunnus = mysqli_real_escape_string($conn,$_POST['tunnus'] );
+    $salasana = mysqli_real_escape_string($conn,$_POST['salasana']);
+
+if ($tunnus == NULL OR $salasana == NULL) {
+    header("location:kirjautuminen.php");
+} else {
+    $sql= "SELECT * FROM users WHERE username ='".$tunnus."' LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_array($result);
+        $hashedPwd = $row['password'];
+        if(password_verify($salasana, $hashedPwd)) {
+
+            mysqli_query($conn, $sql);
+            $_SESSION["tunnus"] = $tunnus;
+            header ("location:index.php");
+            echo "Kirjautuminen onnistui";
+        } else {
+            echo "Kirjautuminen epäonnistui";
+            exit();
+        }
+}
+
+
+}
+
+
 ?>

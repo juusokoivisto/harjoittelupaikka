@@ -1,128 +1,178 @@
 body {
-    font-family: arial, sans-serif;
-    
     min-height: 100vh;
     margin: 0;
 
     display: flex;
     flex-direction: column;
+    background-image: url("tausta.png");
 }
-
 main {
     flex: 1;
+    margin-top: 50px;
 }
-
-.centered-form {
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-.horizontal-nav {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.main2 {
     display: flex;
-    box-shadow: 0 0 8px #666;
-}
-
-.horizontal-nav > li a {
-    display: block;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.horizontal-nav > li a:hover {
-    background-color: #dddddd;
-}
-
-.centered-table {
-    display: flex;
-    align-items: center;
     justify-content: center;
-
-    width: 95%;
-    margin-left: 2.5%;
+    align-items: flex-start;
+    padding: 50px;
+    padding-bottom: 100px;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: blueviolet;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    z-index: 1000
+}
+
+@media (max-width: 1000px) {
+    nav {
+        font-size: 15px;
+    }
+}
+
+a {
+    color: #ffffff;
+    font-family: Snell Roundhand, cursive;
+}
+
+
+.welcome {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    color: #ffffff;
+}
+
+@media (max-width: 400px) {
+    .etusivu {
+        font-size: 50px;
+    }
 }
 
 h1, h2 {
     text-align: center;
+    color: #ffffff;
+    font-family: Snell Roundhand, cursive;
 }
 
-.footer-text {
-    margin-left: 10px;
-    color: black;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    color: white;
+    background-color: blueviolet;
 }
 
-.button-input {
-    width: 200px;
-
-    background-color: white;
-    margin: 20px;
-    padding: 0 10px 10px;
-    border: 1px solid #666;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #666;
-    padding-top: 10px;
+td, th {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
 }
 
-.button-input:hover {
-    background-color: #dddddd;
-}
-
-.footer-text > a {
-    color: black;
-}
-
-footer {
-    min-height: 50px;
-    box-shadow: 0 0 8px #666;
-    margin-top: auto;
+tbody {
+    background-color: darkslateblue;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: violet;
 }
 
 .overflow-table {
-    display: block;
-    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
     white-space: nowrap;
+    table-layout: auto;
 }
 
 .sticky-element {
     position: sticky;
     left: 0;
-    background-color: #ffffff;
+    z-index: 2; 
+    background-color: blueviolet;
 }
 
-.rounded-fieldset {
-    margin: 20px;
-    padding: 0 10px 10px;
-    border: 1px solid #666;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #666;
-    padding-top: 10px;
+footer {
+    background-color: blueviolet;
+    min-height: 50px;
+    color: #ffffff;
+    font-family: Snell Roundhand, cursive;
 }
 
-.rounded-fieldset > legend  {
-    padding: 2px 4px;
-    background: #fff;
-    border: 1px solid #666;
-    border-radius: 8px;
+.footer-text {
+    margin-left: 10px;
+}
+
+.centered-table {
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: auto;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+.centered-table2 {
+    width: 50%;
+    margin: 0 auto;
+    overflow-x: auto;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+fieldset {
+    width: fit-content;
+    zoom: 1.2;
+    color: white;
+    text-align: center;
+    background-color: blueviolet;
+    border-radius: 15px;
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+.testi {
+    margin-left: 15px;
+}
+.lisaa_oppilas_fieldset {
+    background-color: darkslateblue;
+}
+
+.harjpaikka_fieldset {
+    transform: scale(1.5);
+
+}
+
+@media (max-width: 900px) {
+    .harjpaikka_fieldset {
+        transform: scale(1.1);
+        transform-origin: top left;
+    }
+    .centered-table2 {
+    width: 80%;
+    }
+}
+@media (max-width: 600px) {
+    .harjpaikka_fieldset {
+        transform: scale(1);
+    }
+
+}
+
+.page-content {
+    display: flex;
+    flex: 1;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(65, 113, 218);
+    color: #ffffff;
+    border-color: white;
+    font-weight: bold;
 }
