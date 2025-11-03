@@ -4,8 +4,8 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()){
-        $ruokaraha = ($row["ruokaraha"] == "off" ? "Ei makseta" : "Maksetaan");
-        $status = ($row["status"] == "v_hakemassa" ? "Hakemassa" : "Saanut paikan");
+        $ruokaraha = $row["ruokaraha"] == "off" ? "Ei makseta" : "Maksetaan";
+        $status = $row["status"] == "v_hakemassa" ? "Hakemassa" : "Saanut paikan";
 
         echo "<tr>";
         echo "<td class='sticky-element'>" . ($row["nimi"] ?: "-") . "</td>";

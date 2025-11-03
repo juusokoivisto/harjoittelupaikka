@@ -22,33 +22,6 @@ table {
     border-collapse: collapse;
 }
 
-.horizontal-nav {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    box-shadow: 0 0 8px #666;
-}
-
-.horizontal-nav > li a {
-    display: block;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.horizontal-nav > li a {
-    border: 1px solid #dddddd;
-}
-
-.horizontal-nav > li a:hover {
-    background-color: #dddddd;
-}
-
 .centered-table {
     display: flex;
     align-items: center;
@@ -129,4 +102,31 @@ tr:nth-child(even) {
     background: #fff;
     border: 1px solid #666;
     border-radius: 8px;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    box-shadow: 0 0 8px #666;
+}
+
+.navbar li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    border: 1px solid #dddddd;
+}
+  
+.navbar li a:hover {
+    background-color: #dddddd;
+}
+
+.navbar-right {
+    margin-left: auto;
 }

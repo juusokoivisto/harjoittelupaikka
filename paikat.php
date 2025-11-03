@@ -11,18 +11,7 @@ include "connect.php";
     <title>Harjoittelupaikat</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="horizontal-nav">
-                <li><a href="./index.php">Haetut paikat</a></li>
-                <li><a href="./paikat.php">Harjoittelu paikat</a></li>
-                <li><a href="./kirjaudu.php">Kirjaudu Sisään</a></li>
-                <li><a href="./lisaa-oppilas.php">Lisää Oppilas</a></li>
-                <li><a href="./lisaa-harkkapaikka.php">Lisää Harjoittelupaikka</a></li>
-            </ul>   
-        </nav>
-        <h1>Harjoittelupaikat</h1>
-    </header>
+    <?php include "header.php"; ?>
     
     <main>       
         <section>
@@ -45,8 +34,6 @@ include "connect.php";
         </section>
     </main>
 
-    <footer>
-        <p class="footer-text">Tekijä:<a href="mailto:juuso.koivisto@student.kpedu.fi">Juuso Koivisto</a></p>
-    </footer>
+    <?php include "footer.php"; ?>
 </body>
 </html>
