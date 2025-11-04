@@ -25,13 +25,17 @@ $row = mysqli_fetch_array($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Lisää oppilas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Muokkaa oppilas</title>
 </head>
 <body>
     <?php include "header.php"; ?>
 
     <main>       
         <section>
+            <h2>Muokkaa oppilas</h2>  
             <form action="muokkaa_oppilas_action.php" method="POST" class="centered-form">
                 <input type='hidden' name='id' value='<?php echo $row["id"]; ?>'>
                 <fieldset class="rounded-fieldset">

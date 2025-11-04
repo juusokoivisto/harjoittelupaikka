@@ -8,13 +8,17 @@ include "connect.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Kirjaudu sisään</title>
 </head>
 <body>
     <?php include "header.php"; ?>
 
     <main>
-        <section>
+        <section>            
+            <h2>Kirjaudu sisään</h2>  
             <form action="actionpage.php" method="POST" class="centered-form">
                 <fieldset class="rounded-fieldset">
                     <legend>Kirjaudu sisään</legend>

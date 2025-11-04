@@ -13,5 +13,4 @@
             <?php endif; ?>
         </ul>   
     </nav>
-    <h1>Harjoittelupaikat</h1>
 </header>

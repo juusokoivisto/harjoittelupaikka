@@ -13,6 +13,9 @@ if(isset($_SESSION["tunnus"]) == false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Lisää oppilas</title>
 </head>
 <body>
@@ -20,6 +23,7 @@ if(isset($_SESSION["tunnus"]) == false) {
 
     <main>       
         <section>
+            <h2>Lisää oppilas</h2>  
             <form action="actionpage.php" method="POST" class="centered-form">
                 <fieldset class="rounded-fieldset">
                     <legend>Omat tiedot</legend>
