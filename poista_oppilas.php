@@ -1,5 +1,10 @@
 <?php
-include "./../connect.php";
+include "connect.php";
+
+if(isset($_SESSION["tunnus"]) == false) {
+    header ("location: index.php");
+    die();
+}
 
 $oppilas_id = mysqli_real_escape_string($conn, $_POST["id"]);
 

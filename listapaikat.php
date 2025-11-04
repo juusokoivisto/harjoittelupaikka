@@ -3,11 +3,11 @@ $sql = "SELECT * FROM harjoittelupaikat";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()){
-        echo "<option value=".$row["nimi"]."></option>";
+    while ($paikka_row = $result->fetch_assoc()){
+        echo "<option value='".$paikka_row["nimi"]."'></option>";
     }
 } else {
-    echo "Yhtään harjoittelupaikkaa ei löytynyt.";
+    echo "<h1>Yhtään harjoittelupaikkaa ei löytynyt.</h1>";
 }
 
 $conn->close();
