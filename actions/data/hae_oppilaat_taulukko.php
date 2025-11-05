@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $ruokaraha . "</td>";
         echo "<td>" . ($row["muuta"] ?: "-") . "</td>";
 
-        if (isset($_SESSION["tunnus"], $_SESSION["tunnus"]) and $_SESSION["teacher"] == 1) {
+        if (is_teacher()) {
             echo "<td><form action='muokkaa_oppilas.php' method='post'>";
             echo "<input type='submit' value='Muokkaa'>";
             echo "<input type='hidden' name='id' value='".$row["id"]."'>";

@@ -11,7 +11,7 @@
 
             <li class="navbar-right">
                 <?php if (is_logged_in()): ?>
-                    <span>Hei, <?php echo $_SESSION["tunnus"]; ?>.</span>
+                    <span>Hei, <?php echo $_SESSION["username"]; ?>.</span>
                     <a href='actions/logout_action.php'>Kirjaudu ulos</a>
                 <?php else: ?>
                     <a href='kirjaudu.php'>Kirjaudu sisään</a>

@@ -1,10 +1,27 @@
 <?php
 function is_teacher() {
-    if(isset($_SESSION["tunnus"], $_SESSION["teacher"]) and $_SESSION["teacher"] == 1) {
-        return true;
+
+    if (!isset($_SESSION['tunnus'])) {
+        return false;
     }
 
-    return false;
+    global $conn;
+
+    $user_id = $_SESSION['tunnus'];
+
+    $stmt = $conn->prepare("SELECT teacher FROM users WHERE id = ?");
+    if (!$stmt) {
+        return false;
+    }
+
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $stmt->bind_result($teacher);
+    $stmt->fetch();
+    $stmt->close();
+
+    // Return true if the user exists and is a teacher
+    return ($teacher == 1);
 }
 
 function is_logged_in() {

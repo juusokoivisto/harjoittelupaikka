@@ -15,8 +15,8 @@ if ($result->num_rows > 0) {
         echo        "<option ". ($onko_opettaja == 0 ? "selected" : "") ." value='0'>Oppilas</option>";
         echo        "<option ". ($onko_opettaja == 1 ? "selected" : "") ." value='1'>Opettaja</option>";
         echo    "</select>";   
-        echo    "<button type='button' data-user='".$id."' id='reset-btn'>Vaihda salasana</button>";
-        echo    "<button type='button' data-user='".$id."' id='delete-btn'>Poista käyttäjä</button>";
+        echo    "<button type='button' data-user='".$id."' class='reset-btn'>Vaihda salasana</button>";
+        echo    "<button type='button' data-user='".$id."' class='delete-btn'>Poista käyttäjä</button>";
         echo "</div>";
     }
 }

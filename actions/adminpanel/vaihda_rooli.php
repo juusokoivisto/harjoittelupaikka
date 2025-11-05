@@ -4,19 +4,23 @@ include "./../data/utils.php";
 
 if(is_teacher() == false)
 {
-    echo "Ei oikeuksia.";
-    return;
+    http_response_code(403);
+    echo json_encode([
+        "success" => false,
+        "error" => "Ei oikeuksia."
+    ]);
+    exit;
 }
 
 $id = $_POST["user"];
 $uusi_rooli = $_POST["role"];
 
-$sql = "UPDATE users SET teacher = '$uusi_rooli' WHERE id = $id";
-$result = mysqli_query($conn, $sql);
+$stmt = $conn->prepare("UPDATE users SET teacher = ? WHERE id = ?");
+$stmt->bind_param("si", $uusi_rooli, $id);
 
-if ($result === TRUE) {
-    echo "Oppilas on muokattu";
+if ($stmt->execute()) {
+    echo "Käyttäjä on muokattu";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $stmt->error;
 }
 ?>

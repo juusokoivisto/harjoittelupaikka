@@ -18,7 +18,8 @@ $row = mysqli_fetch_array($result);
 $hashedPwd = $row["password"];
 
 if(password_verify($salasana, $hashedPwd)) {
-    $_SESSION["tunnus"] = $username;
+    $_SESSION["tunnus"] = $row["id"];
+    $_SESSION["username"] = $row["username"];
     $_SESSION["teacher"] = $row["teacher"];
 
     echo "Kirjautuminen onnistui";
