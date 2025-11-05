@@ -13,15 +13,16 @@ if(is_teacher() == false)
 }
 
 $id = $_POST["user"];
+$uusi_salasana = $_POST["new_password"];
 
-$stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
-$stmt->bind_param("i", $id);
+$newHashedPwd = password_hash($uusi_salasana, PASSWORD_DEFAULT);
+
+$stmt = $conn->prepare("UPDATE users SET password = ? WHERE id = ?");
+$stmt->bind_param("si", $newHashedPwd, $id);
 
 if ($stmt->execute()) {
-    echo "Käyttäjä on poistettu";
+    echo "Käyttäjän salasana on muokattu";
 } else {
     echo "Error: " . $stmt->error;
 }
-
-$stmt->close();
 ?>

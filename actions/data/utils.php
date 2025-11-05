@@ -1,6 +1,5 @@
 <?php
 function is_teacher() {
-
     if (!isset($_SESSION['tunnus'])) {
         return false;
     }
@@ -20,7 +19,6 @@ function is_teacher() {
     $stmt->fetch();
     $stmt->close();
 
-    // Return true if the user exists and is a teacher
     return ($teacher == 1);
 }
 
