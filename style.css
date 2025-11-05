@@ -107,10 +107,10 @@ tr:nth-child(even) {
 .navbar {
     list-style-type: none;
     display: flex;
+    align-items: center;
 
     margin: 0;
     padding: 0;
-
     box-shadow: 0 0 8px #666;
 }
 
@@ -119,14 +119,20 @@ tr:nth-child(even) {
     color: black;
     padding: 14px 16px;
     text-decoration: none;
-
     border: 1px solid #dddddd;
 }
-  
+
 .navbar li a:hover {
     background-color: #dddddd;
 }
 
 .navbar-right {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.navbar-right span {
+    padding: 0 8px;
 }

@@ -7,6 +7,14 @@ function is_teacher() {
     return false;
 }
 
+function is_logged_in() {
+    if(isset($_SESSION["tunnus"], $_SESSION["teacher"])) {
+        return true;
+    }
+
+    return false;
+}
+
 function hae_oppilas_id($id) {
     include "actions/connect.php";
 
