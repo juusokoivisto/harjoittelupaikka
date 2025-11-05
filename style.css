@@ -138,3 +138,12 @@ tr:nth-child(even) {
 .align-center-horizontal {
     text-align: center;
 }
+
+.horizontal-center {
+    display: block;       
+    margin: 0 auto;       
+    width: 300px;         
+    padding: 5px 10px;    
+    font-size: 16px;      
+    margin-bottom: 16px;
+}

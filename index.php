@@ -12,6 +12,7 @@ include "actions/data/utils.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/search.js"></script>
     <title>Harkkapaikka</title>
 </head>
 <body>
@@ -20,6 +21,7 @@ include "actions/data/utils.php";
     <main>
         <section id="harkkapaikka">
             <h2>Oppilaiden harjoittelupaikat</h2>  
+            <input class="horizontal-center" type="text" id="myInput" onkeyup="searchFunction()" placeholder="Hae..">
             <div class="centered-table">
                 <table class="overflow-table">
                     <thead>
