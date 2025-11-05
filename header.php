@@ -6,6 +6,7 @@
             <?php if (is_teacher()): ?>
                 <li><a href='lisaa-oppilas.php'>Lisää Oppilas</a></li>
                 <li><a href='lisaa-harkkapaikka.php'>Lisää Harjoittelupaikka</a></li>
+                <li><a href='hallintapaneeli.php'>Hallintapaneeli</a></li>
             <?php endif; ?>
 
             <li class="navbar-right">

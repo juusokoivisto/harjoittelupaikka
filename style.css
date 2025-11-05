@@ -47,19 +47,8 @@ h1, h2 {
 }
 
 .button-input {
-    width: 200px;
-
-    background-color: white;
+    width: auto;
     margin: 20px;
-    padding: 0 10px 10px;
-    border: 1px solid #666;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #666;
-    padding-top: 10px;
-}
-
-.button-input:hover {
-    background-color: #dddddd;
 }
 
 .footer-text > a {
@@ -89,19 +78,16 @@ tr:nth-child(even) {
 }
 
 .rounded-fieldset {
-    margin: 20px;
-    padding: 0 10px 10px;
-    border: 1px solid #666;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #666;
-    padding-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 .rounded-fieldset > legend  {
-    padding: 2px 4px;
-    background: #fff;
-    border: 1px solid #666;
-    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .navbar {
@@ -130,9 +116,25 @@ tr:nth-child(even) {
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 0px;
 }
 
-.navbar-right span {
-    padding: 0 8px;
+.admin-panel-div {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    row-gap: 5px;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.admin-panel-child {
+    display: contents;
+    text-align: left;
+}
+
+.align-center-horizontal {
+    text-align: center;
 }

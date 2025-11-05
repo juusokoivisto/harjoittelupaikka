@@ -38,7 +38,7 @@ if(is_teacher() == false) {
                     <label for="f_hp_osoite">Osoite</label><br>
                     <input type="text" id="f_hp_osoite" name="f_hp_osoite" required><br>
                 </fieldset>
-                <input type="submit" value="Lisää">
+                <input class="button-input" type="submit" value="Lisää">
             </form>
         </section>
     </main>
