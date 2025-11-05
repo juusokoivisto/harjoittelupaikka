@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "actions/connect.php";
 
 if(isset($_SESSION["tunnus"]) == false) {
     header ("location: index.php");
@@ -24,7 +24,7 @@ if(isset($_SESSION["tunnus"]) == false) {
     <main>       
         <section>
             <h2>Lisää harjoittelupaikka</h2>  
-            <form action="actionpage.php" method="POST" class="centered-form">
+            <form action="actions/lisaa_harkkapaikka_action.php" method="POST" class="centered-form">
                 <fieldset class="rounded-fieldset">
                     <legend>Työharjoittelupaikan tiedot</legend>
 

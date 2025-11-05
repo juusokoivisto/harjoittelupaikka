@@ -1,5 +1,6 @@
 <?php
-include "connect.php";
+include "actions/connect.php";
+include "actions/data/utils.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,14 +33,14 @@ include "connect.php";
                             <th>Lopetus</th>
                             <th>Ruokarahat</th>
                             <th>Lisätietoja</th>
-                            <?php if(isset($_SESSION["tunnus"])): ?>
+                            <?php if(is_teacher()): ?>
                                 <th>Toiminnot</th>
                             <?php endif; ?>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            include "luku.php";
+                            include "actions/data/hae_oppilaat_taulukko.php";
                         ?>
                     </tbody>
                 </table>

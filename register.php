@@ -11,17 +11,17 @@ include "actions/connect.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Kirjaudu sisään</title>
+    <title>Rekisteröidy</title>
 </head>
 <body>
     <?php include "header.php"; ?>
 
     <main>
         <section>            
-            <h2>Kirjaudu sisään</h2>  
-            <form action="actions/kirjaudu_action.php" method="POST" class="centered-form">
+            <h2>Rekisteröidy</h2>  
+            <form action="actions/register_action.php" method="POST" class="centered-form">
                 <fieldset class="rounded-fieldset">
-                    <legend>Kirjaudu sisään</legend>
+                    <legend>Rekisteröidy</legend>
 
                     <label for="f_username">Käyttäjänimi</label><br>
                     <input type="text" id="f_username" name="f_username" required><br>
@@ -29,8 +29,8 @@ include "actions/connect.php";
                     <label for="f_salasana">Salasana</label><br>
                     <input type="password" id="f_salasana" name="f_salasana" required><br>
                 </fieldset>
-                <p>Jos ei ole käyttäjää, <a href="register.php">rekisteröidy.</a></p>
-                <input type="submit" value="Kirjaudu sisään">
+                <p>Jos sinulla on käyttäjä, <a href="kirjaudu.php">kirjaudu sisään.</a></p>
+                <input type="submit" value="Rekisteröidy">
             </form>
         </section>
     </main>

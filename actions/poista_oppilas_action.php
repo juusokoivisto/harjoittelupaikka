@@ -2,7 +2,7 @@
 include "connect.php";
 
 if(isset($_SESSION["tunnus"]) == false) {
-    header ("location: index.php");
+    header ("location: ./../index.php");
     die();
 }
 
@@ -15,5 +15,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-header("location: index.php");
+header("location: ./../index.php");
 ?>

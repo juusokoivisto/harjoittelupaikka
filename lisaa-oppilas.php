@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "actions/connect.php";
 
 if(isset($_SESSION["tunnus"]) == false) {
     header ("location: index.php");
@@ -24,7 +24,7 @@ if(isset($_SESSION["tunnus"]) == false) {
     <main>       
         <section>
             <h2>Lisää oppilas</h2>  
-            <form action="actionpage.php" method="POST" class="centered-form">
+            <form action="actions/lisaa_oppilas_action.php" method="POST" class="centered-form">
                 <fieldset class="rounded-fieldset">
                     <legend>Omat tiedot</legend>
 
@@ -42,7 +42,7 @@ if(isset($_SESSION["tunnus"]) == false) {
                     <input list="paikat" id="f_paikka" name="f_paikka"/><br>
                     <datalist id="paikat">
                         <?php
-                            include "listapaikat.php";
+                            include "actions/data/hae_options_harkkapaikat.php";
                         ?>
                     </datalist>
 

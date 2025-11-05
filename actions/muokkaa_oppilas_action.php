@@ -1,13 +1,12 @@
 <?php
 include "connect.php";
 
-if(isset($_SESSION["tunnus"]) == false) {
-    header ("location: index.php");
-    die();
-}
-
-if(isset($_POST["id"]) == false) {
-    header ("location: index.php");
+if(isset(
+    $_SESSION["tunnus"], 
+    $_SESSION["teacher"],
+    $_POST["id"]) == false) 
+{
+    header ("location: ./../index.php");
     die();
 }
 
@@ -40,5 +39,5 @@ if ($result === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-header("location: index.php");
+header("location: ./../index.php");
 ?>

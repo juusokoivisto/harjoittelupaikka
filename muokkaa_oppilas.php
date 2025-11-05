@@ -1,5 +1,6 @@
 <?php
-include "connect.php";
+include "actions/connect.php";
+include "actions/data/utils.php";
 
 if(isset($_SESSION["tunnus"]) == false) {
     header ("location: index.php");
@@ -12,11 +13,7 @@ if(isset($_POST["id"]) == false) {
 }
 
 $oppilas_id = mysqli_real_escape_string($conn, $_POST["id"]);
-
-$sql = "SELECT * FROM oppilaat WHERE id='".$oppilas_id."';";
-$result = mysqli_query($conn, $sql);
-
-$row = mysqli_fetch_array($result);
+$row = hae_oppilas_id($oppilas_id)
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +33,7 @@ $row = mysqli_fetch_array($result);
     <main>       
         <section>
             <h2>Muokkaa oppilas</h2>  
-            <form action="muokkaa_oppilas_action.php" method="POST" class="centered-form">
+            <form action="actions/muokkaa_oppilas_action.php" method="POST" class="centered-form">
                 <input type='hidden' name='id' value='<?php echo $row["id"]; ?>'>
                 <fieldset class="rounded-fieldset">
                     <legend>Omat tiedot</legend>
@@ -55,7 +52,7 @@ $row = mysqli_fetch_array($result);
                     <input list="paikat" id="f_paikka" name="f_paikka" value="<?php echo $row["paikka"]; ?>"><br>
                     <datalist id="paikat">
                         <?php
-                            include "listapaikat.php";
+                            include "actions/data/hae_options_harkkapaikat.php";
                         ?>
                     </datalist>
 

@@ -18,13 +18,13 @@ if ($result->num_rows > 0) {
         echo "<td>" . $ruokaraha . "</td>";
         echo "<td>" . ($row["muuta"] ?: "-") . "</td>";
 
-        if (isset($_SESSION["tunnus"])) {
+        if (isset($_SESSION["tunnus"], $_SESSION["tunnus"]) and $_SESSION["teacher"] == 1) {
             echo "<td><form action='muokkaa_oppilas.php' method='post'>";
             echo "<input type='submit' value='Muokkaa'>";
             echo "<input type='hidden' name='id' value='".$row["id"]."'>";
             echo "</form>";
     
-            echo "<form action='poista_oppilas.php' method='post'>";
+            echo "<form action='actions/poista_oppilas_action.php' method='post'>";
             echo "<input type='submit' value='Poista'>";
             echo "<input type='hidden' name='id' value='".$row["id"]."'>";
             echo "</form></td>";

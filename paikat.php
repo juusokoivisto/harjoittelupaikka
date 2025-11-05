@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "actions/connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ include "connect.php";
                     </thead>
                     <tbody>
                         <?php
-                            include "harkkapaikat.php";
+                            include "actions/data/hae_harkkapaikat.php";
                         ?>
                     </tbody>
                 </table>

@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
         echo "</tr>";
     }
 } else {
-    echo "Yhtään harjoittelupaikkaa ei löytynyt.";
+    echo "<p>Yhtään harjoittelupaikkaa ei löytynyt.</p>";
 }
 
 $conn->close();

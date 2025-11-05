@@ -6,8 +6,6 @@ if ($result->num_rows > 0) {
     while ($paikka_row = $result->fetch_assoc()){
         echo "<option value='".$paikka_row["nimi"]."'></option>";
     }
-} else {
-    echo "<h1>Yhtään harjoittelupaikkaa ei löytynyt.</h1>";
 }
 
 $conn->close();
