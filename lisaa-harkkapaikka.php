@@ -1,7 +1,8 @@
 <?php
 include "actions/connect.php";
+include "actions/data/utils.php";
 
-if(isset($_SESSION["tunnus"]) == false) {
+if(is_teacher() == false) {
     header ("location: index.php");
     die();
 }

@@ -3,7 +3,7 @@
         <ul class="navbar">
             <li><a href="index.php">Haetut paikat</a></li>
             <li><a href="paikat.php">Harjoittelu paikat</a></li>
-            <?php if (isset($_SESSION["tunnus"])): ?>
+            <?php if (is_teacher()): ?>
                 <li><a href='lisaa-oppilas.php'>Lisää Oppilas</a></li>
                 <li><a href='lisaa-harkkapaikka.php'>Lisää Harjoittelupaikka</a></li>
 

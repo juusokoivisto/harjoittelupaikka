@@ -1,5 +1,6 @@
 <?php
 include "actions/connect.php";
+include "actions/data/utils.php";
 ?>
 
 <!DOCTYPE html>

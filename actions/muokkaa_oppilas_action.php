@@ -1,25 +1,21 @@
 <?php
 include "connect.php";
 
-if(isset(
-    $_SESSION["tunnus"], 
-    $_SESSION["teacher"],
-    $_POST["id"]) == false) 
+if(isset($_POST["id"]) == false or is_teacher() == false) 
 {
     header ("location: ./../index.php");
     die();
 }
 
-$id = $_POST["id"];
-
-$nimi = $_POST["f_oppilas"];
-$paikka = $_POST["f_paikka"];
-$ohjaaja = $_POST["f_ohjaaja"];
-$yhteystiedot = $_POST["f_yhteystiedot"];
-$status = $_POST["f_status"];
-$aloitus = $_POST["f_aloitus"];
-$lopetus = $_POST["f_lopetus"];
-$muuta = $_POST["f_muuta"];
+$id =           mysqli_real_escape_string($conn, $_POST["id"]);
+$nimi =         mysqli_real_escape_string($conn, $_POST["f_oppilas"]);
+$paikka =       mysqli_real_escape_string($conn, $_POST["f_paikka"]);
+$ohjaaja =      mysqli_real_escape_string($conn, $_POST["f_ohjaaja"]);
+$yhteystiedot = mysqli_real_escape_string($conn, $_POST["f_yhteystiedot"]);
+$status =       mysqli_real_escape_string($conn, $_POST["f_status"]);
+$aloitus =      mysqli_real_escape_string($conn, $_POST["f_aloitus"]);
+$lopetus =      mysqli_real_escape_string($conn, $_POST["f_lopetus"]);
+$muuta =        mysqli_real_escape_string($conn, $_POST["f_muuta"]);
 
 $ruokaraha = "off";
 if (!empty($_POST["f_ruokaraha"])) {

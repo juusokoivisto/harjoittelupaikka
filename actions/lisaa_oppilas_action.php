@@ -15,6 +15,12 @@ if (isset(
     die();
 }
 
+if(is_teacher() == false) 
+{
+    header ("location: ./../index.php");
+    die();
+}
+
 $nimi =         mysqli_real_escape_string($conn, $_POST["f_oppilas"]);
 $paikka =       mysqli_real_escape_string($conn, $_POST["f_paikka"]);
 $ohjaaja =      mysqli_real_escape_string($conn, $_POST["f_ohjaaja"]);

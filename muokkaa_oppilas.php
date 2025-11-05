@@ -2,12 +2,10 @@
 include "actions/connect.php";
 include "actions/data/utils.php";
 
-if(isset($_SESSION["tunnus"]) == false) {
-    header ("location: index.php");
-    die();
-}
-
-if(isset($_POST["id"]) == false) {
+if(isset(
+    $_SESSION["tunnus"], 
+    $_POST["id"]) == false) 
+{
     header ("location: index.php");
     die();
 }
