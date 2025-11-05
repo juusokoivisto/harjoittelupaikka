@@ -1,6 +1,8 @@
 <?php
 include "actions/connect.php";
 include "actions/data/utils.php";
+
+$id = $_GET["id"];
 ?>
 
 <!DOCTYPE html>
@@ -13,27 +15,24 @@ include "actions/data/utils.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/validate_pwd.js"></script>
-    <script type="text/javascript" src="js/register.js"></script>
-    <title>Rekisteröidy</title>
+    <script type="text/javascript" src="js/vaihda_salasana.js"></script> 
+    <title>Vaihda salasana</title>
 </head>
 <body>
     <?php include "header.php"; ?>
 
     <main>
-        <section>            
-            <h2>Rekisteröidy</h2>  
-            <form action="actions/register_action.php" method="POST" class="centered-form">
+        <section>
+            <h2>Vaihda salasana</h2>  
+            <form action="actions/adminpanel/vaihda_salasana.php" method="POST" class="centered-form">
+                <input type='hidden' name='id' value='<?php echo $id; ?>'>
                 <fieldset class="rounded-fieldset">
-                    <legend>Rekisteröidy</legend>
+                    <legend>Vaihda salasana</legend>
 
-                    <label for="f_username">Käyttäjänimi</label><br>
-                    <input type="text" id="f_username" name="f_username" required><br>
-
-                    <label for="f_salasana">Salasana</label><br>
-                    <input type="password" id="f_salasana" name="f_salasana" required><br>
+                    <label for="new_password">Uusi salasana</label><br>
+                    <input type="password" id="new_password" name="new_password" required><br>
                 </fieldset>
-                <p>Jos sinulla on käyttäjä, <a href="kirjaudu.php">kirjaudu sisään.</a></p>
-                <input type="submit" value="Rekisteröidy">
+                <input class="button-input" type="submit" value="Vaihda salasana">
             </form>
         </section>
     </main>

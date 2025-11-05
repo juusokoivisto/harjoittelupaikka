@@ -23,9 +23,10 @@ if(password_verify($salasana, $hashedPwd)) {
     $_SESSION["teacher"] = $row["teacher"];
 
     echo "Kirjautuminen onnistui";
+    header("location: ./../index.php");
+
 } else {
     echo "Kirjautuminen epäonnistui";
+    header("location: ./../kirjaudu.php");
 }
-
-header("location: ./../index.php");
 ?>

@@ -12,7 +12,7 @@ if(is_teacher() == false)
     exit;
 }
 
-$id = $_POST["user"];
+$id = $_POST["id"];
 $uusi_salasana = $_POST["new_password"];
 
 $newHashedPwd = password_hash($uusi_salasana, PASSWORD_DEFAULT);
@@ -25,4 +25,8 @@ if ($stmt->execute()) {
 } else {
     echo "Error: " . $stmt->error;
 }
+
+$stmt->close();
+header ("location: ./../../index.php");
+die();
 ?>

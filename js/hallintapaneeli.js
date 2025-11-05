@@ -32,14 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(res => res.text())
             .then(response => console.log("Server:", response))
             .catch(err => console.error("Fetch error:", err))
-            .finally(() => deleteBtn.disabled = false);
+            .finally(() => {
+                deleteBtn.disabled = false
+                window.location.reload();
+            });
         });
     });
 
     const resets = document.querySelectorAll(".reset-btn");
-    resets.forEach(deleteBtn => {
+    resets.forEach(resetBtn => {
         resetBtn.addEventListener("click", function() {
-            
+            const user = this.dataset.user;
+            window.location.href = `vaihda_salasana.php?id=${user}`;
         });
     });
 });
